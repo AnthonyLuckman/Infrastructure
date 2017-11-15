@@ -1,0 +1,12 @@
+.vagrant
+.idea/
+defunct
+ubuntu-xenial-16.04-cloudimg-console.log
+.idea/workspace.xml
+puppet/modules/apt
+puppet/modules/docker
+puppet/modules/epel
+puppet/modules/ntp
+puppet/modules/stdlib
+puppet/.librarian
+puppet/Puppetfile.lock

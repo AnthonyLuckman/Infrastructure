@@ -8,7 +8,7 @@
 VAGRANTFILE_API_VERSION = "2"
 VAGRANT_BOX = "ubuntu/xenial64"
 VAGRANT_BOX_MEMORY = "1024"
-VIRTUAL_BOX_NAME = "LINSVR01"
+VIRTUAL_BOX_NAME = "LINSVR"
 
 # nfs is disabled on windows automatically
 NFS_ENABLED = true
@@ -52,7 +52,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
   # your network.
-  # config.vm.network "public_network"
+  config.vm.network "public_network"
+
 
   # Share an additional folder to the guest VM. The first argument is
   # the path on the host to the actual folder. The second argument is
@@ -88,8 +89,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # SHELL
   config.vm.provision :shell, :path => 'scripts/bootstrap.sh'
   config.vm.provision :puppet do |puppet|
+    puppet.options = "--verbose --debug"
     puppet.manifests_path = "puppet/manifests"
-    puppet.manifest_file = "init.pp"
+    puppet.manifest_file = "site.pp"
     puppet.module_path = "puppet/modules"
+    puppet.hiera_config_path = "puppet/hiera.yaml"
   end
 end
