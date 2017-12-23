@@ -9,11 +9,7 @@
 # Learn more about module testing here:
 # https://docs.puppet.com/guides/tests_smoke.html
 #
-#include accounts
-#include profile
-#include baseconfig
 notify {"Agent connection is successful": }
-#include ntp
 
 node 'linsvr' {
   include role::server
