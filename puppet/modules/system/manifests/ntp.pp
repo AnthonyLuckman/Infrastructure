@@ -1,4 +1,4 @@
-# == Class: environment::ntp
+# == Class: system::ntp
 #
 # Performs software set up for Network Time Protocol.
 #

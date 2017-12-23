@@ -5,5 +5,5 @@
 class profile::server {
   notify { 'Adding Server instance profile': }
   include profile::base
-  #  include environment::software
+  include system::software
 }
