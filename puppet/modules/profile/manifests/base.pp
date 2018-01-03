@@ -4,12 +4,11 @@
 #
 class profile::base {
   notify { 'Adding base instance profile': }
-#  include environment::filesystem
-#  include environment::firewall
+  #include system::filesystem
+  #include system::firewall
   include system::software
   include system::groups
   include system::users
-  include system::docker
 
   file {
     '/home/ubuntu/.bashrc':

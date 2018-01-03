@@ -11,6 +11,9 @@
 #
 notify {"Agent connection is successful": }
 
-node 'linsvr' {
-  include role::server
+node 'linsvr01' {
+  include role::dockermanager
+}
+node 'linwkr01' {
+  include role::dockerworker
 }

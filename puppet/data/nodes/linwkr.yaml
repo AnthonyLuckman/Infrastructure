@@ -1,0 +1,7 @@
+---
+network::server:
+  - 192.168.40.1
+docker::token:
+  - SWMTKN-1-2lw8bnr57qsu74d6iq2q1wr2wq2i334g7425dfr3zucimvh4bl-2vwn6gysbdj605l37c61iixie
+
+
