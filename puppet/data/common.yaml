@@ -1,3 +1,6 @@
 ---
 ntp::servers:
   - earth.luckman.net
+network::server: 192.168.40.1
+docker::token: SWMTKN-1-18pzy6fpb7higl2cnaawc1vkb9t4pq4kz5xt88fwjv1v7n72uo-1ntqc62q7ikhu1cvp6da85b5o
+

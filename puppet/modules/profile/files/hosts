@@ -1,0 +1,15 @@
+127.0.0.1       localhost
+
+192.168.40.1 LINSVR01   LINSVR01.dev    LINSVR01.luckman.net
+192.168.40.2 LINWKR01   LINWKR01.dev    LINWKR01.luckman.net
+192.168.40.3 LINWKR02   LINWKR02.dev    LINWKR02.luckman.net
+192.168.40.4 LINWKR03   LINWKR03.dev    LINWKR03.luckman.net
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost   ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+ff02::3 ip6-allhosts
+127.0.1.1       ubuntu-xenial   ubuntu-xenial

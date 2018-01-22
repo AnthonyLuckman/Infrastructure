@@ -7,6 +7,7 @@ puppet/modules/apt
 puppet/modules/docker
 puppet/modules/epel
 puppet/modules/ntp
+puppet/modules/ruby
 puppet/modules/stdlib
 puppet/.librarian
 puppet/Puppetfile.lock

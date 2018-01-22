@@ -3,12 +3,12 @@
 # Adds docker management configuration.
 #
 class profile::dockermanager {
-  include docker
   notify { 'Adding docker manager instance profile': }
-  $ipaddr = lookup('network::ipaddr')
+  class {'docker':
+  } ->
   docker::swarm {'cluster_manager':
     init           => true,
-    advertise_addr => "$ipaddr",
-    listen_addr    => "$ipaddr",
+    advertise_addr => lookup('network::ipaddr'),
+    listen_addr    => lookup('network::ipaddr'),
   }
 }

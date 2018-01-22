@@ -11,10 +11,10 @@ class profile::base {
   include system::users
 
   file {
-    '/home/ubuntu/.bashrc':
-      owner => 'ubuntu',
-      group => 'ubuntu',
+    '/etc/hosts':
+      owner => 'root',
+      group => 'root',
       mode  => '0644',
-      source => 'puppet:///modules/profile/helloworld.txt';
+      source => 'puppet:///modules/profile/hosts';
   }
 }

@@ -3,10 +3,9 @@
 # Includes docker worker configuration.
 #
 class profile::dockerworker {
-  include docker
-
   notify { 'Adding docker worker instance profile': }
-
+  class {'docker':
+  } ->
   docker::swarm {'cluster_worker':
     join           => true,
     advertise_addr => lookup('network::ipaddr'),
